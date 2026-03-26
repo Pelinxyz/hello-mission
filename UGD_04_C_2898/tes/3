@@ -1,0 +1,947 @@
+(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push(["object" == typeof document ? document.currentScript : void 0, 67458, (e, t, r) => {
+    "use strict";
+    var l = e.r(71645).__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+    r.c = function(e) {
+        return l.H.useMemoCache(e)
+    }
+}
+, 932, (e, t, r) => {
+    "use strict";
+    t.exports = e.r(67458)
+}
+, 74647, e => {
+    "use strict";
+    var t = e.i(43476)
+      , r = e.i(932)
+      , l = e.i(71645)
+      , c = {
+        color: void 0,
+        size: void 0,
+        className: void 0,
+        style: void 0,
+        attr: void 0
+    }
+      , a = l.default.createContext && l.default.createContext(c)
+      , o = ["attr", "size", "title"];
+    function i() {
+        return (i = Object.assign.bind()).apply(null, arguments)
+    }
+    function n(e, t) {
+        var r = Object.keys(e);
+        if (Object.getOwnPropertySymbols) {
+            var l = Object.getOwnPropertySymbols(e);
+            t && (l = l.filter(function(t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable
+            })),
+            r.push.apply(r, l)
+        }
+        return r
+    }
+    function s(e) {
+        for (var t = 1; t < arguments.length; t++) {
+            var r = null != arguments[t] ? arguments[t] : {};
+            t % 2 ? n(Object(r), !0).forEach(function(t) {
+                var l, c, a;
+                l = e,
+                c = t,
+                a = r[t],
+                (c = function(e) {
+                    var t = function(e, t) {
+                        if ("object" != typeof e || !e)
+                            return e;
+                        var r = e[Symbol.toPrimitive];
+                        if (void 0 !== r) {
+                            var l = r.call(e, t || "default");
+                            if ("object" != typeof l)
+                                return l;
+                            throw TypeError("@@toPrimitive must return a primitive value.")
+                        }
+                        return ("string" === t ? String : Number)(e)
+                    }(e, "string");
+                    return "symbol" == typeof t ? t : t + ""
+                }(c))in l ? Object.defineProperty(l, c, {
+                    value: a,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }) : l[c] = a
+            }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : n(Object(r)).forEach(function(t) {
+                Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
+            })
+        }
+        return e
+    }
+    function d(e) {
+        return t => l.default.createElement(u, i({
+            attr: s({}, e.attr)
+        }, t), function e(t) {
+            return t && t.map( (t, r) => l.default.createElement(t.tag, s({
+                key: r
+            }, t.attr), e(t.child)))
+        }(e.child))
+    }
+    function u(e) {
+        var t = t => {
+            var r, {attr: c, size: a, title: n} = e, d = function(e, t) {
+                if (null == e)
+                    return {};
+                var r, l, c = function(e, t) {
+                    if (null == e)
+                        return {};
+                    var r = {};
+                    for (var l in e)
+                        if (({}).hasOwnProperty.call(e, l)) {
+                            if (-1 !== t.indexOf(l))
+                                continue;
+                            r[l] = e[l]
+                        }
+                    return r
+                }(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var a = Object.getOwnPropertySymbols(e);
+                    for (l = 0; l < a.length; l++)
+                        r = a[l],
+                        -1 === t.indexOf(r) && ({}).propertyIsEnumerable.call(e, r) && (c[r] = e[r])
+                }
+                return c
+            }(e, o), u = a || t.size || "1em";
+            return t.className && (r = t.className),
+            e.className && (r = (r ? r + " " : "") + e.className),
+            l.default.createElement("svg", i({
+                stroke: "currentColor",
+                fill: "currentColor",
+                strokeWidth: "0"
+            }, t.attr, c, d, {
+                className: r,
+                style: s(s({
+                    color: e.color || t.color
+                }, t.style), e.style),
+                height: u,
+                width: u,
+                xmlns: "http://www.w3.org/2000/svg"
+            }), n && l.default.createElement("title", null, n), e.children)
+        }
+        ;
+        return void 0 !== a ? l.default.createElement(a.Consumer, null, e => t(e)) : t(c)
+    }
+    function h(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 512 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function m(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 576 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function f(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 496 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm194.8 170.2C334.3 380.4 292.5 400 248 400s-86.3-19.6-114.8-53.8c-13.6-16.3 11-36.7 24.6-20.5 22.4 26.9 55.2 42.2 90.2 42.2s67.8-15.4 90.2-42.2c13.4-16.2 38.1 4.2 24.6 20.5z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function g(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 448 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M439.15 453.06L297.17 384l141.99-69.06c7.9-3.95 11.11-13.56 7.15-21.46L432 264.85c-3.95-7.9-13.56-11.11-21.47-7.16L224 348.41 37.47 257.69c-7.9-3.95-17.51-.75-21.47 7.16L1.69 293.48c-3.95 7.9-.75 17.51 7.15 21.46L150.83 384 8.85 453.06c-7.9 3.95-11.11 13.56-7.15 21.47l14.31 28.63c3.95 7.9 13.56 11.11 21.47 7.15L224 419.59l186.53 90.72c7.9 3.95 17.51.75 21.47-7.15l14.31-28.63c3.95-7.91.74-17.52-7.16-21.47zM150 237.28l-5.48 25.87c-2.67 12.62 5.42 24.85 16.45 24.85h126.08c11.03 0 19.12-12.23 16.45-24.85l-5.5-25.87c41.78-22.41 70-62.75 70-109.28C368 57.31 303.53 0 224 0S80 57.31 80 128c0 46.53 28.22 86.87 70 109.28zM280 112c17.65 0 32 14.35 32 32s-14.35 32-32 32-32-14.35-32-32 14.35-32 32-32zm-112 0c17.65 0 32 14.35 32 32s-14.35 32-32 32-32-14.35-32-32 14.35-32 32-32z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function x(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 512 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M500.33 0h-47.41a12 12 0 0 0-12 12.57l4 82.76A247.42 247.42 0 0 0 256 8C119.34 8 7.9 119.53 8 256.19 8.1 393.07 119.1 504 256 504a247.1 247.1 0 0 0 166.18-63.91 12 12 0 0 0 .48-17.43l-34-34a12 12 0 0 0-16.38-.55A176 176 0 1 1 402.1 157.8l-101.53-4.87a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12h200.33a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function p(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 384 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M202.021 0C122.202 0 70.503 32.703 29.914 91.026c-7.363 10.58-5.093 25.086 5.178 32.874l43.138 32.709c10.373 7.865 25.132 6.026 33.253-4.148 25.049-31.381 43.63-49.449 82.757-49.449 30.764 0 68.816 19.799 68.816 49.631 0 22.552-18.617 34.134-48.993 51.164-35.423 19.86-82.299 44.576-82.299 106.405V320c0 13.255 10.745 24 24 24h72.471c13.255 0 24-10.745 24-24v-5.773c0-42.86 125.268-44.645 125.268-160.627C377.504 66.256 286.902 0 202.021 0zM192 373.459c-38.196 0-69.271 31.075-69.271 69.271 0 38.195 31.075 69.27 69.271 69.27s69.271-31.075 69.271-69.271-31.075-69.27-69.271-69.27z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function b(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 320 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M302.189 329.126H196.105l55.831 135.993c3.889 9.428-.555 19.999-9.444 23.999l-49.165 21.427c-9.165 4-19.443-.571-23.332-9.714l-53.053-129.136-86.664 89.138C18.729 472.71 0 463.554 0 447.977V18.299C0 1.899 19.921-6.096 30.277 5.443l284.412 292.542c11.472 11.179 3.007 31.141-12.5 31.141z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function v(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 496 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm-80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm176 192H152c-21.2 0-21.2-32 0-32h192c21.2 0 21.2 32 0 32zm-16-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function w(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 512 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M489.038 22.963C465.944-.13 434.648-5.93 413.947 6.129c-58.906 34.312-181.25-53.077-321.073 86.746S40.441 355.041 6.129 413.945c-12.059 20.702-6.26 51.999 16.833 75.093 23.095 23.095 54.392 28.891 75.095 16.832 58.901-34.31 181.246 53.079 321.068-86.743S471.56 156.96 505.871 98.056c12.059-20.702 6.261-51.999-16.833-75.093zM243.881 95.522c-58.189 14.547-133.808 90.155-148.358 148.358-1.817 7.27-8.342 12.124-15.511 12.124-1.284 0-2.59-.156-3.893-.481-8.572-2.144-13.784-10.83-11.642-19.403C81.901 166.427 166.316 81.93 236.119 64.478c8.575-2.143 17.261 3.069 19.403 11.642s-3.069 17.259-11.641 19.402z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function y(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 512 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function j(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 576 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M485.5 0L576 160H474.9L405.7 0h79.8zm-128 0l69.2 160H149.3L218.5 0h139zm-267 0h79.8l-69.2 160H0L90.5 0zM0 192h100.7l123 251.7c1.5 3.1-2.7 5.9-5 3.3L0 192zm148.2 0h279.6l-137 318.2c-1 2.4-4.5 2.4-5.5 0L148.2 192zm204.1 251.7l123-251.7H576L357.3 446.9c-2.3 2.7-6.5-.1-5-3.2z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function N(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 512 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function z(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 512 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function C(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 320 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c9.3-15.9-2.2-36-20.7-36z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    function S(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 448 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M350.85 129c25.97 4.67 47.27 18.67 63.92 42 14.65 20.67 24.64 46.67 29.96 78 4.67 28.67 4.32 57.33-1 86-7.99 47.33-23.97 87-47.94 119-28.64 38.67-64.59 58-107.87 58-10.66 0-22.3-3.33-34.96-10-8.66-5.33-18.31-8-28.97-8s-20.3 2.67-28.97 8c-12.66 6.67-24.3 10-34.96 10-43.28 0-79.23-19.33-107.87-58-23.97-32-39.95-71.67-47.94-119-5.32-28.67-5.67-57.33-1-86 5.32-31.33 15.31-57.33 29.96-78 16.65-23.33 37.95-37.33 63.92-42 15.98-2.67 37.95-.33 65.92 7 23.97 6.67 44.28 14.67 60.93 24 16.65-9.33 36.96-17.33 60.93-24 27.98-7.33 49.96-9.67 65.94-7zm-54.94-41c-9.32 8.67-21.65 15-36.96 19-10.66 3.33-22.3 5-34.96 5l-14.98-1c-1.33-9.33-1.33-20 0-32 2.67-24 10.32-42.33 22.97-55 9.32-8.67 21.65-15 36.96-19 10.66-3.33 22.3-5 34.96-5l14.98 1 1 15c0 12.67-1.67 24.33-4.99 35-3.99 15.33-10.31 27.67-18.98 37z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    let _ = function(e) {
+        let l, c, a, o, i, n, s, d, u, h, m, f, g = (0,
+        r.c)(28), {card: x, isFlipped: b, isMatched: v, onFlip: w} = e;
+        g[0] !== x.id || g[1] !== b || g[2] !== v || g[3] !== w ? (l = () => {
+            b || v || w(x.id)
+        }
+        ,
+        g[0] = x.id,
+        g[1] = b,
+        g[2] = v,
+        g[3] = w,
+        g[4] = l) : l = g[4];
+        let y = l
+          , j = b || v
+          , N = x.icon;
+        g[5] === Symbol.for("react.memo_cache_sentinel") ? (c = {
+            perspective: "600px"
+        },
+        g[5] = c) : c = g[5];
+        let z = j ? "rotateY(180deg)" : "rotateY(0deg)";
+        g[6] !== z ? (a = {
+            transformStyle: "preserve-3d",
+            transform: z,
+            transition: "transform 0.5s ease-in-out"
+        },
+        g[6] = z,
+        g[7] = a) : a = g[7];
+        let C = `absolute inset-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 via-purple-500 to-indigo-500 border border-white/40 shadow-lg shadow-purple-400/40 hover:shadow-xl hover:shadow-fuchsia-400/50 ${!j ? "hover:scale-105" : ""} transition-transform duration-200`;
+        g[8] === Symbol.for("react.memo_cache_sentinel") ? (o = {
+            backfaceVisibility: "hidden"
+        },
+        i = (0,
+        t.jsx)(p, {
+            className: "text-white/80 text-2xl drop-shadow-md"
+        }),
+        g[8] = o,
+        g[9] = i) : (o = g[8],
+        i = g[9]),
+        g[10] !== C ? (n = (0,
+        t.jsx)("div", {
+            className: C,
+            style: o,
+            children: i
+        }),
+        g[10] = C,
+        g[11] = n) : n = g[11];
+        let S = `absolute inset-0 flex items-center justify-center rounded-2xl bg-white/95 shadow-lg shadow-white/20 border border-white/30 ${v ? "animate-glow ring-2 ring-green-400/60 opacity-80" : ""}`;
+        return g[12] === Symbol.for("react.memo_cache_sentinel") ? (s = {
+            backfaceVisibility: "hidden",
+            transform: "rotateY(180deg)"
+        },
+        g[12] = s) : s = g[12],
+        g[13] !== x.color ? (d = {
+            color: x.color
+        },
+        g[13] = x.color,
+        g[14] = d) : d = g[14],
+        g[15] !== N || g[16] !== d ? (u = (0,
+        t.jsx)(N, {
+            className: "text-4xl",
+            style: d
+        }),
+        g[15] = N,
+        g[16] = d,
+        g[17] = u) : u = g[17],
+        g[18] !== u || g[19] !== S ? (h = (0,
+        t.jsx)("div", {
+            className: S,
+            style: s,
+            children: u
+        }),
+        g[18] = u,
+        g[19] = S,
+        g[20] = h) : h = g[20],
+        g[21] !== h || g[22] !== a || g[23] !== n ? (m = (0,
+        t.jsxs)("div", {
+            className: "relative w-full h-full",
+            style: a,
+            children: [n, h]
+        }),
+        g[21] = h,
+        g[22] = a,
+        g[23] = n,
+        g[24] = m) : m = g[24],
+        g[25] !== y || g[26] !== m ? (f = (0,
+        t.jsx)("div", {
+            onClick: y,
+            className: "w-22 h-22 cursor-pointer select-none",
+            style: c,
+            children: m
+        }),
+        g[25] = y,
+        g[26] = m,
+        g[27] = f) : f = g[27],
+        f
+    }
+      , M = function(e) {
+        let l, c, a = (0,
+        r.c)(11), {cards: o, flippedCards: i, matchedCards: n, onFlip: s} = e;
+        if (a[0] !== o || a[1] !== i || a[2] !== n || a[3] !== s) {
+            let e;
+            a[5] !== i || a[6] !== n || a[7] !== s ? (e = e => (0,
+            t.jsx)(_, {
+                card: e,
+                isFlipped: i.includes(e.id),
+                isMatched: n.includes(e.id),
+                onFlip: s
+            }, e.id),
+            a[5] = i,
+            a[6] = n,
+            a[7] = s,
+            a[8] = e) : e = a[8],
+            l = o.map(e),
+            a[0] = o,
+            a[1] = i,
+            a[2] = n,
+            a[3] = s,
+            a[4] = l
+        } else
+            l = a[4];
+        return a[9] !== l ? (c = (0,
+        t.jsx)("div", {
+            className: "grid grid-cols-4 gap-4 justify-items-center",
+            children: l
+        }),
+        a[9] = l,
+        a[10] = c) : c = a[10],
+        c
+    }
+      , O = function(e) {
+        let l, c, a, o, i, n, s, d, u, m, f, g, p = (0,
+        r.c)(30), {moves: v, matchedCount: w, totalPairs: y, timer: j, onReset: C} = e, S = w === y && y > 0, _ = Math.floor(j / 60), M = j % 60;
+        p[0] !== M ? (l = M.toString().padStart(2, "0"),
+        p[0] = M,
+        p[1] = l) : l = p[1];
+        let O = `${_}:${l}`;
+        p[2] === Symbol.for("react.memo_cache_sentinel") ? (c = (0,
+        t.jsxs)("p", {
+            className: "text-xs font-medium text-indigo-300 uppercase tracking-wider flex items-center justify-center gap-1",
+            children: [(0,
+            t.jsx)(N, {
+                className: "text-indigo-400"
+            }), " Waktu"]
+        }),
+        p[2] = c) : c = p[2],
+        p[3] !== O ? (a = (0,
+        t.jsxs)("div", {
+            className: "flex-1 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-3 rounded-2xl",
+            children: [c, (0,
+            t.jsx)("p", {
+                className: "text-2xl font-bold text-white mt-1",
+                children: O
+            })]
+        }),
+        p[3] = O,
+        p[4] = a) : a = p[4],
+        p[5] === Symbol.for("react.memo_cache_sentinel") ? (o = (0,
+        t.jsxs)("p", {
+            className: "text-xs font-medium text-indigo-300 uppercase tracking-wider flex items-center justify-center gap-1",
+            children: [(0,
+            t.jsx)(b, {
+                className: "text-indigo-400"
+            }), " Percobaan"]
+        }),
+        p[5] = o) : o = p[5],
+        p[6] !== v ? (i = (0,
+        t.jsxs)("div", {
+            className: "flex-1 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-3 rounded-2xl",
+            children: [o, (0,
+            t.jsx)("p", {
+                className: "text-2xl font-bold text-white mt-1",
+                children: v
+            })]
+        }),
+        p[6] = v,
+        p[7] = i) : i = p[7],
+        p[8] === Symbol.for("react.memo_cache_sentinel") ? (n = (0,
+        t.jsxs)("p", {
+            className: "text-xs font-medium text-indigo-300 uppercase tracking-wider flex items-center justify-center gap-1",
+            children: [(0,
+            t.jsx)(z, {
+                className: "text-indigo-400"
+            }), " Ditemukan"]
+        }),
+        p[8] = n) : n = p[8],
+        p[9] !== w || p[10] !== y ? (s = (0,
+        t.jsxs)("div", {
+            className: "flex-1 bg-white/10 backdrop-blur-md border border-white/10 px-4 py-3 rounded-2xl",
+            children: [n, (0,
+            t.jsxs)("p", {
+                className: "text-2xl font-bold text-white mt-1",
+                children: [w, "/", y]
+            })]
+        }),
+        p[9] = w,
+        p[10] = y,
+        p[11] = s) : s = p[11],
+        p[12] !== a || p[13] !== i || p[14] !== s ? (d = (0,
+        t.jsxs)("div", {
+            className: "flex justify-center gap-4 mb-5",
+            children: [a, i, s]
+        }),
+        p[12] = a,
+        p[13] = i,
+        p[14] = s,
+        p[15] = d) : d = p[15],
+        p[16] !== S || p[17] !== v || p[18] !== O ? (u = S && (0,
+        t.jsx)("div", {
+            className: "bg-gradient-to-r from-yellow-500/20 to-amber-500/20 border border-yellow-400/30 rounded-2xl px-4 py-3 mb-4 backdrop-blur-sm",
+            children: (0,
+            t.jsxs)("p", {
+                className: "text-yellow-200 font-bold text-lg animate-pulse",
+                children: ["🎉 Selamat! Selesai dalam waktu ", O, " dengan ", v, " percobaan!"]
+            })
+        }),
+        p[16] = S,
+        p[17] = v,
+        p[18] = O,
+        p[19] = u) : u = p[19],
+        p[20] !== S ? (m = S ? (0,
+        t.jsx)(x, {}) : (0,
+        t.jsx)(h, {}),
+        p[20] = S,
+        p[21] = m) : m = p[21];
+        let k = S ? "Main Lagi" : "Acak Ulang";
+        return p[22] !== C || p[23] !== m || p[24] !== k ? (f = (0,
+        t.jsxs)("button", {
+            onClick: C,
+            className: "px-8 py-2.5 bg-gradient-to-r from-yellow-400 to-amber-400 text-indigo-950 font-bold rounded-full hover:from-yellow-300 hover:to-amber-300 transition-all duration-200 shadow-lg shadow-yellow-500/25 hover:shadow-xl hover:shadow-yellow-400/30 hover:scale-105 active:scale-95 flex items-center gap-2 mx-auto",
+            children: [m, k]
+        }),
+        p[22] = C,
+        p[23] = m,
+        p[24] = k,
+        p[25] = f) : f = p[25],
+        p[26] !== f || p[27] !== d || p[28] !== u ? (g = (0,
+        t.jsxs)("div", {
+            className: "text-center mb-6 w-full max-w-md",
+            children: [d, u, f]
+        }),
+        p[26] = f,
+        p[27] = d,
+        p[28] = u,
+        p[29] = g) : g = p[29],
+        g
+    }
+      , k = function(e) {
+        let l, c, a = (0,
+        r.c)(4), {currentDifficulty: o, onSelect: i} = e;
+        a[0] === Symbol.for("react.memo_cache_sentinel") ? (l = [{
+            key: "easy",
+            label: "Easy",
+            pairs: 4,
+            icon: f
+        }, {
+            key: "medium",
+            label: "Medium",
+            pairs: 6,
+            icon: v
+        }, {
+            key: "hard",
+            label: "Hard",
+            pairs: 8,
+            icon: g
+        }],
+        a[0] = l) : l = a[0];
+        let n = l;
+        return a[1] !== o || a[2] !== i ? (c = (0,
+        t.jsx)("div", {
+            className: "flex gap-3 mb-5",
+            children: n.map(e => {
+                let r = e.icon;
+                return (0,
+                t.jsxs)("button", {
+                    onClick: () => i(e.key),
+                    className: e.key === o ? "px-5 py-2.5 rounded-full font-bold text-sm bg-gradient-to-r from-yellow-400 to-amber-400 text-indigo-950 shadow-lg shadow-yellow-500/25 scale-105 transition-all duration-200 flex items-center gap-2" : "px-5 py-2.5 rounded-full font-bold text-sm bg-white/10 text-white/80 border border-white/10 hover:bg-white/20 hover:text-white hover:scale-105 transition-all duration-200 backdrop-blur-sm flex items-center gap-2",
+                    children: [(0,
+                    t.jsx)(r, {}), " ", e.label, " (", e.pairs, ")"]
+                }, e.key)
+            }
+            )
+        }),
+        a[1] = o,
+        a[2] = i,
+        a[3] = c) : c = a[3],
+        c
+    };
+    function L(e) {
+        return d({
+            tag: "svg",
+            attr: {
+                viewBox: "0 0 512 512"
+            },
+            child: [{
+                tag: "path",
+                attr: {
+                    d: "M119.436 36c-16.126 0-29.2 17.237-29.2 38.5v363c0 21.263 13.074 38.5 29.2 38.5h275.298c16.126 0 29.198-17.237 29.198-38.5v-363c0-21.263-13.072-38.5-29.198-38.5zm26.369 10.951l11.002 32.856 34.648.312-27.848 20.617 10.41 33.05-28.212-20.114-28.215 20.113L128 100.736 100.152 80.12l34.649-.312zM363.979 161.84c7.127 9.459 12.739 20.689 16.832 32.04 3.8 10.544 6.197 21.211 6.668 31.02-.163 19.015-3.915 23.274-14.557 36.934l-6.703-11.48c-10.85-13.106-30.779-48.4-47.383-43.672-6.521 6.11-8.996 13.37-10.313 20.802 2.898 8.8 4.477 18.43 4.477 28.516 0 15.293-3.615 29.54-9.996 41.416 22.643 4.537 57.927 19.332 57.973 39.223-.27 3.783-1.835 7.68-4.362 10.42-10.743 12.528-36.958 4.125-45.2 10.072.796 6.947 4.112 14.118 4.355 20.174.136 4.36-1.768 10.58-6.508 13.996-5.67 4.087-12.968 4.551-18.52 3.045C279.94 392.226 272 379.649 256 377c-13.544 3.491-22.412 13.87-34.742 17.346-5.552 1.506-12.85 1.042-18.52-3.045-4.74-3.417-6.644-9.636-6.508-13.996-.058-7.142 4.107-13.794 4.356-20.174-15.741-7.788-33.816 1.97-45.201-10.072-2.527-2.74-4.093-6.637-4.362-10.42 6.146-27.341 35.374-34.684 57.973-39.223C202.615 285.54 199 271.293 199 256c0-11.489 2.047-22.385 5.764-32.135-2.357-7.923-3.441-15.988-9.438-22.441-8.758-.925-14.079 6.897-17.842 12.63-11.683 19.5-18.718 30.606-32.88 46.192-16.604-23.4-19.314-49.29-13.157-70.988 6.065-20.331 19.17-38.798 37.926-47.924 21.216-9.766 39.872-10.03 58.885.203 5.163-13.053 10.4-25.65 18.035-36.209 9.625-13.31 23.8-25.631 43.707-25.295 38.8.656 73.993 51.156 73.979 81.807zm-72.22-63.893c-35.759 2.409-44.771 44.746-55.189 71.29l-9.447-7.087c-18.428-12.31-31.076-13.732-49.875-4.63-12.924 6.288-23.701 20.62-28.553 36.882-3.38 11.329-3.765 23.225-.949 33.645 9.45-13.549 15.806-30.08 28.317-39.178 7.486-7.975 26.27-8.498 35.45 3.897 4.838 7.02 7.437 14.54 9.5 22.234h72.165c.592-1.944 1.067-3.762 2.017-6.033 2.956-7.064 7.765-16.266 18.395-19.504 18.09-3.862 32.494 7.106 43.498 18.514 4.517 4.717 8.492 9.696 12.098 14.517-.69-6.798-2.477-14.651-5.31-22.508-13.127-36.707-37.889-51.031-70.386-32.011 2.556-16.423 16.87-35.72 46.25-26.962-9.094-17.135-30.355-42.471-47.98-43.066zM220.644 233c-2.31 6.965-3.643 14.753-3.643 23 0 15.85 4.892 30.032 12.26 39.855C236.628 305.68 245.988 311 256 311c10.012 0 19.372-5.32 26.74-15.145C290.108 286.032 295 271.85 295 256c0-8.247-1.334-16.035-3.643-23zM232 280h48s-8 14-24 14-24-14-24-14zm-11.14 33.566c-13.86 3.34-50.369 8.9-51.842 21.42 9.621 1.947 20.446.838 28.998 2.235 5.993 1.018 12.82 3.323 17.285 9.517 3.375 4.683 3.577 10.103 3.037 14.21-.543 5.89-3.317 10.557-3.975 16.32 15.955-2.59 28.264-17.532 41.637-18.268 16-.702 29.313 17.402 41.637 18.268-.893-5.59-3.262-11.158-3.975-16.32-.54-4.107-.338-9.527 3.037-14.21 4.465-6.194 11.292-8.5 17.285-9.517 9.742-2.229 19.975.396 28.998-2.235-5.77-13.125-39.813-19.454-51.841-21.42C281.665 323.01 269.45 329 256 329c-13.452 0-25.665-5.991-35.14-15.434zm117.122 64.649l28.213 20.113 28.215-20.113L384 411.264l27.848 20.617-34.649.312-11.004 32.856-11.002-32.856-34.648-.312 27.848-20.617z"
+                },
+                child: []
+            }]
+        })(e)
+    }
+    let B = {
+        easy: [{
+            icon: S,
+            color: "#ef4444"
+        }, {
+            icon: w,
+            color: "#eab308"
+        }, {
+            icon: y,
+            color: "#ec4899"
+        }, {
+            icon: m,
+            color: "#f97316"
+        }],
+        medium: [{
+            icon: S,
+            color: "#ef4444"
+        }, {
+            icon: w,
+            color: "#eab308"
+        }, {
+            icon: y,
+            color: "#ec4899"
+        }, {
+            icon: m,
+            color: "#f97316"
+        }, {
+            icon: C,
+            color: "#3b82f6"
+        }, {
+            icon: j,
+            color: "#8b5cf6"
+        }],
+        hard: [{
+            icon: S,
+            color: "#ef4444"
+        }, {
+            icon: w,
+            color: "#eab308"
+        }, {
+            icon: y,
+            color: "#ec4899"
+        }, {
+            icon: m,
+            color: "#f97316"
+        }, {
+            icon: C,
+            color: "#3b82f6"
+        }, {
+            icon: j,
+            color: "#8b5cf6"
+        }, {
+            icon: function(e) {
+                return d({
+                    tag: "svg",
+                    attr: {
+                        viewBox: "0 0 384 512"
+                    },
+                    child: [{
+                        tag: "path",
+                        attr: {
+                            d: "M216 23.86c0-23.8-30.65-32.77-44.15-13.04C48 191.85 224 200 224 288c0 35.63-29.11 64.46-64.85 63.99-35.17-.45-63.15-29.77-63.15-64.94v-85.51c0-21.7-26.47-32.23-41.43-16.5C27.8 213.16 0 261.33 0 320c0 105.87 86.13 192 192 192s192-86.13 192-192c0-170.29-168-193-168-296.14z"
+                        },
+                        child: []
+                    }]
+                })(e)
+            },
+            color: "#f59e0b"
+        }, {
+            icon: function(e) {
+                return d({
+                    tag: "svg",
+                    attr: {
+                        viewBox: "0 0 512 512"
+                    },
+                    child: [{
+                        tag: "path",
+                        attr: {
+                            d: "M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"
+                        },
+                        child: []
+                    }]
+                })(e)
+            },
+            color: "#6366f1"
+        }]
+    }
+      , E = e => {
+        let t = [...e.flatMap( (e, t) => [{
+            id: 2 * t,
+            icon: e.icon,
+            color: e.color,
+            pairId: t
+        }, {
+            id: 2 * t + 1,
+            icon: e.icon,
+            color: e.color,
+            pairId: t
+        }])];
+        for (let e = t.length - 1; e > 0; e--) {
+            let r = Math.floor(Math.random() * (e + 1));
+            [t[e],t[r]] = [t[r], t[e]]
+        }
+        return t
+    }
+    ;
+    function P() {
+        let e, c, a, o, i, n, s, d, u, h, m, f, g, x, p, b, v, w, y = (0,
+        r.c)(37);
+        y[0] === Symbol.for("react.memo_cache_sentinel") ? (e = [],
+        y[0] = e) : e = y[0];
+        let[j,N] = (0,
+        l.useState)(e);
+        y[1] === Symbol.for("react.memo_cache_sentinel") ? (c = [],
+        y[1] = c) : c = y[1];
+        let[z,C] = (0,
+        l.useState)(c);
+        y[2] === Symbol.for("react.memo_cache_sentinel") ? (a = [],
+        y[2] = a) : a = y[2];
+        let[S,_] = (0,
+        l.useState)(a)
+          , [P,A] = (0,
+        l.useState)(0)
+          , [I,V] = (0,
+        l.useState)("easy")
+          , [D,R] = (0,
+        l.useState)(0)
+          , U = S.length > 0 && S.length === j.length;
+        y[3] !== U ? (o = () => {
+            if (U)
+                return;
+            let e = setInterval( () => {
+                R(T)
+            }
+            , 1e3);
+            return () => clearInterval(e)
+        }
+        ,
+        i = [U],
+        y[3] = U,
+        y[4] = o,
+        y[5] = i) : (o = y[4],
+        i = y[5]),
+        (0,
+        l.useEffect)(o, i),
+        y[6] !== I ? (n = () => {
+            N(E(B[I])),
+            C([]),
+            _([]),
+            A(0),
+            R(0)
+        }
+        ,
+        s = [I],
+        y[6] = I,
+        y[7] = n,
+        y[8] = s) : (n = y[7],
+        s = y[8]),
+        (0,
+        l.useEffect)(n, s),
+        y[9] !== j || y[10] !== z ? (d = () => {
+            if (2 === z.length) {
+                let[e,t] = z
+                  , r = j.find(t => t.id === e)
+                  , l = j.find(e => e.id === t);
+                if (A(H),
+                r.pairId === l.pairId)
+                    _(r => [...r, e, t]),
+                    C([]);
+                else {
+                    let e = setTimeout( () => {
+                        C([])
+                    }
+                    , 800);
+                    return () => clearTimeout(e)
+                }
+            }
+        }
+        ,
+        u = [z, j],
+        y[9] = j,
+        y[10] = z,
+        y[11] = d,
+        y[12] = u) : (d = y[11],
+        u = y[12]),
+        (0,
+        l.useEffect)(d, u),
+        y[13] !== z ? (h = e => {
+            z.length < 2 && !z.includes(e) && C(t => [...t, e])
+        }
+        ,
+        y[13] = z,
+        y[14] = h) : h = y[14];
+        let Y = h;
+        y[15] !== I ? (m = () => {
+            N(E(B[I])),
+            C([]),
+            _([]),
+            A(0),
+            R(0)
+        }
+        ,
+        y[15] = I,
+        y[16] = m) : m = y[16];
+        let $ = m;
+        y[17] === Symbol.for("react.memo_cache_sentinel") ? (f = (0,
+        t.jsxs)("div", {
+            className: "absolute inset-0 overflow-hidden pointer-events-none",
+            children: [(0,
+            t.jsx)("div", {
+                className: "absolute top-1/4 -left-20 w-72 h-72 bg-purple-600/20 rounded-full blur-3xl"
+            }), (0,
+            t.jsx)("div", {
+                className: "absolute bottom-1/4 -right-20 w-80 h-80 bg-indigo-600/20 rounded-full blur-3xl"
+            }), (0,
+            t.jsx)("div", {
+                className: "absolute top-10 right-1/3 w-40 h-40 bg-pink-600/10 rounded-full blur-2xl"
+            })]
+        }),
+        y[17] = f) : f = y[17],
+        y[18] === Symbol.for("react.memo_cache_sentinel") ? (g = (0,
+        t.jsxs)("h1", {
+            className: "text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-pink-300 to-purple-300 drop-shadow-lg animate-float tracking-tight flex items-center gap-3",
+            children: [(0,
+            t.jsx)(L, {
+                className: "text-yellow-300 text-5xl drop-shadow-lg"
+            }), "Memory Card"]
+        }),
+        y[18] = g) : g = y[18],
+        y[19] === Symbol.for("react.memo_cache_sentinel") ? (x = e => V(e),
+        y[19] = x) : x = y[19],
+        y[20] !== I ? (p = (0,
+        t.jsx)(k, {
+            currentDifficulty: I,
+            onSelect: x
+        }),
+        y[20] = I,
+        y[21] = p) : p = y[21];
+        let F = S.length / 2
+          , W = j.length / 2;
+        return y[22] !== P || y[23] !== $ || y[24] !== F || y[25] !== W || y[26] !== D ? (b = (0,
+        t.jsx)(O, {
+            moves: P,
+            matchedCount: F,
+            totalPairs: W,
+            timer: D,
+            onReset: $
+        }),
+        y[22] = P,
+        y[23] = $,
+        y[24] = F,
+        y[25] = W,
+        y[26] = D,
+        y[27] = b) : b = y[27],
+        y[28] !== j || y[29] !== z || y[30] !== Y || y[31] !== S ? (v = (0,
+        t.jsx)("div", {
+            className: "bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-3xl shadow-2xl shadow-purple-900/30",
+            children: (0,
+            t.jsx)(M, {
+                cards: j,
+                flippedCards: z,
+                matchedCards: S,
+                onFlip: Y
+            })
+        }),
+        y[28] = j,
+        y[29] = z,
+        y[30] = Y,
+        y[31] = S,
+        y[32] = v) : v = y[32],
+        y[33] !== p || y[34] !== b || y[35] !== v ? (w = (0,
+        t.jsxs)("div", {
+            className: "min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 animate-gradient p-4 relative overflow-hidden",
+            children: [f, (0,
+            t.jsxs)("div", {
+                className: "relative z-10 flex flex-col items-center",
+                children: [g, p, b, v]
+            })]
+        }),
+        y[33] = p,
+        y[34] = b,
+        y[35] = v,
+        y[36] = w) : w = y[36],
+        w
+    }
+    function H(e) {
+        return e + 1
+    }
+    function T(e) {
+        return e + 1
+    }
+    e.s(["default", () => P], 74647)
+}
+]);
